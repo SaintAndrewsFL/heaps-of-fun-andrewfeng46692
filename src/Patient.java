@@ -12,26 +12,19 @@ class Patient implements Comparable<Patient> {
         this.waitTime = waitTime;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getSeverityScore() {
-        return severityScore;
-    }
-
-    public int getWaitTime() {
-        return waitTime;
-    }
-
-    public void incrementWaitTime() {
-        waitTime++;
-    }
+    public String getName() { return name; }
+    public int getSeverityScore() { return severityScore; }
+    public int getWaitTime() { return waitTime; }
+    public void incrementWaitTime() { waitTime++; }
 
     // Default comparison by severity
     @Override
     public int compareTo(Patient other) {
-        return Integer.compare(this.severityScore, other.severityScore);
+        if (this.severityScore != other.severityScore) {
+            return Integer.compare(this.severityScore, other.severityScore);
+        }
+
+        return Integer.compare(this.waitTime, other.waitTime);
     }
 
     @Override

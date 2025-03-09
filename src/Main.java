@@ -14,9 +14,7 @@
  * - A MaxHeap to process patients with highest severity (for emergency care)
  * - (Bonus) A priority queue system that can balance between severity and wait time
  */
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
     }
 }
